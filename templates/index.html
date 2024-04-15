@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta charset="UTF-8">
+      
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+        <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+        <link rel="icon" type="image/png" sizes="32x32" href="/transparent_logo.png">
+    
+        <title>Natoplus Newsletter</title>
+    </head>
+    <body>
+        <div class="body-background">
+            <a href="https://natoplus.framer.ai"><div class="first"></div></a>
+        </div>
+        <div class="container">
+            <div class="content">
+                <form method="post" action="{{ url_for('home') }}">
+                    <div class="info">
+                        <h1>Natoplus</h1>
+                        <h2>Stay in the Loop!</h2>
+                        <h3>Subscribe to our newsletter for the latest updates, straight to your inbox.</h3>
+                    </div>
+                    <div class="input">
+                        <input type="text" name="name" class="name" placeholder="Your name please..." required>
+                        <input type="email" name="email" class="email mail" placeholder="Join our newsletter..." required>
+                    </div>
+                    <button class="submit" type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/script.js"></script>
+</html>

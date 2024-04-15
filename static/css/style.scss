@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'thefont';
+    src: url('../BlackHanSans-Regular.ttf') format('truetype');
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'thefont';
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(113deg,#21edff 0%,rgb(77,72,219) 52.2882959864161%,rgb(106,48,150) 83.59644434473536%);
+    background-image: url(/bg_copy.png);
+    background-position: center;
+    background-size: contain;
+    height: 100vh;
+    width: 100vw;
+    @media (max-width: 768px){
+        background-image: url(/bg.webp);
+        background-position: center;
+    }
+    .body-background{
+        .first,.second,.third,.fourth{
+            background: url(/transparent_logo.png);
+            background-repeat: repeat !important;
+            background-size: cover !important;
+            cursor: pointer;
+            height: 100px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100px;
+        }
+    }
+    .container{
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin: 20vh auto;
+            &::before{
+                background: url(/transparent_logo.png);
+                background-size: cover;
+                content: '';
+                height: 40vh;
+                position: absolute;
+                width: 40vw;
+            }
+        .content{
+            align-items: center;
+            backdrop-filter: blur(20px);
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px 1px rgb(255 255 255 / 20%);
+            display: flex;
+            height: 60vh;
+            justify-content: center;
+            max-width: 800px;
+            min-height: 480px;
+            min-width: 350px;
+            width: 70vw;
+            form{
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .info{
+                    margin: 0 0 10px;
+                    text-align: center;
+                    h1{
+                        font-size: 2.5em;
+                        text-transform: uppercase;
+                    }
+                    h1,h2,h3{
+                        color: #fff;
+                        margin: 10px;
+                    }
+                }
+                .input{
+                    display: flex;
+                    flex-direction: column;
+                    .name,.email{
+                        background: none;
+                        border: none;
+                        border-radius: 10px;
+                        box-shadow:0px 0px 7px black;
+                        color: #fff;
+                        height: 50px;
+                        font-size: 1em;
+                        margin: 10px;
+                        max-width: 400px;
+                        padding: 10px;
+                        width: 50vw;
+                        &::placeholder{
+                            color: #fff;
+                            font-size: 1em;
+                            text-align: center;
+                        }
+                    }
+                }
+                .submit{
+                    align-items: center;
+                    background: rgb(9, 255, 229);
+                    border: none;
+                    border-radius: 10px;
+                    box-shadow: 0 .7065919983928324px .7065919983928324px -.625px #00000026,0 1.8065619053231785px 1.8065619053231785px -1.25px #00000025,0 3.6217592146567767px 3.6217592146567767px -1.875px #00000023,0 6.8655999097303715px 6.8655999097303715px -2.5px #00000020,0 13.646761411524492px 13.646761411524492px -3.125px #0000001b,0 30px 30px -3.75px #0000000d;
+                    color: #0099ff;
+                    cursor: pointer;
+                    display: flex;
+                    font-size: 1em;
+                    height: 50px;
+                    justify-content: center;
+                    margin: 10px;
+                    max-width: 400px;
+                    outline: none;
+                    width: 50vw;
+                    &:hover{
+                        /*background-color: rgb(31, 135, 123);*/
+                        opacity: 1;
+                        transform: scale(1.1) rotate(0deg) translateZ(0px);
+                    }
+                }
+            }
+        }
+    }
+}
