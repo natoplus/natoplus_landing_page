@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "thefont";
+  src: url("../assets/BlackHanSans-Regular.ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+  font-family: "thefont";
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(113deg, #21edff 0%, rgb(77, 72, 219) 52.2882959864%, rgb(106, 48, 150) 83.5964443447%);
+  background-image: url(../assets/bg_copy.png);
+  background-position: center;
+  background-size: contain;
+  height: 100vh;
+  width: 100vw;
+}
+@media (max-width: 768px) {
+  body {
+    background-image: url(../assets/bg.webp);
+    background-position: center;
+  }
+}
+body .body-background .first, body .body-background .second, body .body-background .third, body .body-background .fourth {
+  background: url(../assets/transparent_logo.png);
+  background-repeat: repeat !important;
+  background-size: cover !important;
+  cursor: pointer;
+  height: 100px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100px;
+}
+body .container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 20vh auto;
+}
+body .container::before {
+  background: url(../assets/transparent_logo.png);
+  background-size: cover;
+  content: "";
+  height: 40vh;
+  position: absolute;
+  width: 40vw;
+}
+body .container .content {
+  align-items: center;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 1px rgba(255, 255, 255, 0.2);
+  display: flex;
+  height: 60vh;
+  justify-content: center;
+  max-width: 800px;
+  min-height: 480px;
+  min-width: 350px;
+  width: 70vw;
+}
+body .container .content form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .container .content form .info {
+  margin: 0 0 10px;
+  text-align: center;
+}
+body .container .content form .info h1 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+body .container .content form .info h1, body .container .content form .info h2, body .container .content form .info h3 {
+  color: #fff;
+  margin: 10px;
+}
+body .container .content form .input {
+  display: flex;
+  flex-direction: column;
+}
+body .container .content form .input .name, body .container .content form .input .email {
+  background: none;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 7px black;
+  color: #fff;
+  height: 50px;
+  font-size: 1em;
+  margin: 10px;
+  max-width: 400px;
+  padding: 10px;
+  width: 50vw;
+}
+body .container .content form .input .name::-moz-placeholder, body .container .content form .input .email::-moz-placeholder {
+  color: #fff;
+  font-size: 1em;
+  text-align: center;
+}
+body .container .content form .input .name::placeholder, body .container .content form .input .email::placeholder {
+  color: #fff;
+  font-size: 1em;
+  text-align: center;
+}
+.name {
+    width: 320px !important;
+    margin: 10px auto !important;
+}
+.submit {
+    width: 200px !important;
+    color: #04141a !important;
+    font-size: 1.6em !important;
+}
+.mail {
+    font-family: Arial, sans-serif;
+}
+body .container .content form .submit {
+  align-items: center;
+  background: rgb(9, 255, 229);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0.7065919984px 0.7065919984px -0.625px rgba(0, 0, 0, 0.1490196078), 0 1.8065619053px 1.8065619053px -1.25px rgba(0, 0, 0, 0.1450980392), 0 3.6217592147px 3.6217592147px -1.875px rgba(0, 0, 0, 0.137254902), 0 6.8655999097px 6.8655999097px -2.5px rgba(0, 0, 0, 0.1254901961), 0 13.6467614115px 13.6467614115px -3.125px rgba(0, 0, 0, 0.1058823529), 0 30px 30px -3.75px rgba(0, 0, 0, 0.0509803922);
+  color: #0099ff;
+  cursor: pointer;
+  display: flex;
+  font-size: 1em;
+  height: 50px;
+  justify-content: center;
+  margin: 10px;
+  max-width: 400px;
+  outline: none;
+  width: 50vw;
+}
+.congrats{
+    color: white;
+}
+body .container .content form .submit:hover {
+  /*background-color: rgb(31, 135, 123);*/
+  opacity: 1;
+  transform: scale(1.1) rotate(0deg) translateZ(0px);
+}/*# sourceMappingURL=style.css.map */
