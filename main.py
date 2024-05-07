@@ -74,6 +74,7 @@ def send_welcome_mail(name, email, new=True):
 
     context = ssl.create_default_context()
 
+    socket_break = 0
     while True:
         try:
             with smtplib.SMTP_SSL(host="smtp.gmail.com", port=465, context=context) as connection:
@@ -87,8 +88,12 @@ def send_welcome_mail(name, email, new=True):
             print(MAIL_ADDRESS)
             break
         except socket.gaierror as e:
-            time.sleep(3)
             print("there is an error:", e)
+            socket_break += 1
+            time.sleep(3)
+            if socket_break > 4:
+                error404()
+                break
         else:
             break
 
@@ -122,6 +127,11 @@ def go_back():
 @app.route("/test")
 def temp():
     return render_template("done.html")
+
+@app.route("/error404")
+def error404():
+    return  render_template("error.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
